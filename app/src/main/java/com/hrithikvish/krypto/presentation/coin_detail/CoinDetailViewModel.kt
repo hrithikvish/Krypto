@@ -30,7 +30,6 @@ class CoinDetailViewModel @Inject constructor(
     init {
         savedStateHandle.get<String>(PARAM_COIN_ID)?.let { coinId ->
             getCoin(coinId)
-            Log.d("tesstt", "${this::class.simpleName} init: $coinId")
         }
     }
 

@@ -34,7 +34,6 @@ class CoinsListFragment() : Fragment() {
             onItemClick = { coinId ->
                 val action = CoinsListFragmentDirections.actionCoinsListFragmentToCoinDetailFragment(coinId = coinId)
                 findNavController().navigate(action)
-                Log.d("tesstt", "${this::class.simpleName} onItemClick: $coinId")
             }
         )
         binding.coinListRv.adapter = adapter
