@@ -7,10 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.navArgs
 import com.hrithikvish.krypto.databinding.FragmentCoinDetailBinding
 import com.hrithikvish.krypto.presentation.coin_detail.CoinDetailViewModel
-import com.hrithikvish.krypto.presentation.xml_views.adapter.TagsRvAdapter
 import com.hrithikvish.krypto.presentation.xml_views.adapter.TeamRvAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -19,7 +17,6 @@ import kotlinx.coroutines.launch
 class CoinDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentCoinDetailBinding
-    val args by navArgs<CoinDetailFragmentArgs>()
     val coinDetailViewModel by viewModels<CoinDetailViewModel>()
 
     override fun onCreateView(
@@ -29,8 +26,6 @@ class CoinDetailFragment : Fragment() {
         binding = FragmentCoinDetailBinding.inflate(layoutInflater, container, false)
 
         val coinDetailState = coinDetailViewModel.state2
-
-        val tagAdapter = TagsRvAdapter()
 
         val teamAdapter = TeamRvAdapter()
         binding.teamMembersRv.adapter = teamAdapter

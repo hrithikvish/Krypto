@@ -1,9 +1,8 @@
-package com.hrithikvish.krypto.presentation.xml_views.adapterft
+package com.hrithikvish.krypto.presentation.xml_views.adapter
 
 import androidx.databinding.BindingAdapter
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
-import com.hrithikvish.krypto.domain.model.CoinDetail
 
 @BindingAdapter("chipsList")
 fun setChipsList(chipGroup: ChipGroup, tags: List<String>?) {
